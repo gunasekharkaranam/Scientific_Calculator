@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>sci_cal</title>
+</head>
+<body style="text-align:center;">
+
+    <h1>SCIENTIFIC CALCULATOR</h1>
+
+    <div>
+        <form id="sumForm">
+            <label for="int1">Integer1</label><br>
+            <input type="text" id="int1" name="int1"><br>
+            <label for="int2">Integer2</label><br>
+            <input type="text" id="int2" name="int2"><br><br>
+            <input type="button" value="Calculate Sum" onclick="calculateSum()">
+            <input type="button" value="Calculate Differnce" onclick="calculateDiff()">
+            <input type="button" value="Calculate Multi" onclick="calculateMulti()">
+            <input type="button" value="Calculate Div" onclick="calculateDiv()">
+        </form>
+
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function calculateSum() 
+        {
+            var int1=document.getElementById("int1").value;
+            var int2=document.getElementById("int2").value;
+
+            if(!isNaN(int1)&&!isNaN(int2)) 
+            {
+                var sum=parseInt(int1)+parseInt(int2);
+                document.getElementById("result").innerHTML="Sum: "+sum;
+            } 
+            else 
+            {
+                document.getElementById("result").innerHTML="Invalid input. Please enter valid numbers";
+            }
+        }
+
+        function calculateDiff()
+        {
+            var int1=document.getElementById("int1").value;
+            var int2=document.getElementById("int2").value;
+
+            if(!isNaN(int1)&&!isNaN(int2))
+            {
+                var diff=parseInt(int1)-parseInt(int2);
+                document.getElementById("result").innerHTML= "Difference: "+ diff;
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="Invalid input. Please enter valid numbers"
+            }
+        }
+
+        function calculateMulti()
+        {
+            var int1=document.getElementById("int1").value;
+            var int2=document.getElementById("int2").value;
+
+            if(!isNaN(int1)&&!isNaN(int2))
+            {
+                var Multi=parseInt(int1)*parseInt(int2);
+                document.getElementById("result").innerHTML= "Difference: "+ Multi;
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="Invalid input. Please enter valid numbers"
+            }
+        }
+
+        function calculateDiv()
+        {
+            var int1=document.getElementById("int1").value;
+            var int2=document.getElementById("int2").value;
+
+            if(!isNaN(int1)&&!isNaN(int2))
+            {
+                var Div=parseInt(int1)/parseInt(int2);
+                document.getElementById("result").innerHTML= "Division: "+ Div;
+            }
+            else
+            {
+                document.getElementById("result").innerHTML="Invalid input. Please enter valid numbers"
+            }
+        }        
+    </script>
+
+</body>
+</html>
